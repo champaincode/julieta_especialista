@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Julieta Rodríguez - Portfolio Landing Page
 
 Landing page profesional en **Astro** con **TailwindCSS** para Julieta Rodríguez, especialista en Marketing Digital & Redes Sociales.
@@ -157,3 +158,6 @@ El proyecto genera archivos estáticos en `dist/` que pueden desplegarse en cual
 ## 🤝 Soporte
 
 Para consultas: hola@julietarodriguez.com
+=======
+# julieta_especialista
+>>>>>>> 2bbe384e67a903627c2b2faedbc09abbf358a63b
