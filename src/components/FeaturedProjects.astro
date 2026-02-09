@@ -1,0 +1,56 @@
+---
+import ProjectCard from './ProjectCard.astro';
+---
+
+<section id="proyectos" class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="font-fraunces text-4xl md:text-5xl font-bold mb-4 text-text-dark">
+        Proyectos Destacados
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Resultados reales que transformaron la presencia digital de marcas gastronómicas
+      </p>
+    </div>
+    
+    <!-- Project Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ProjectCard
+        image="/assets/project-1.webp"
+        title="Campaña Gastronómica - Restaurante Fusión"
+        description="Estrategia integral de redes sociales que aumentó la visibilidad y engagement del restaurante en el mercado local."
+        metrics={[
+          { label: 'Alcance', value: '+145%' },
+          { label: 'Engagement', value: '+89%' },
+          { label: 'Ventas', value: '+52%' }
+        ]}
+        bgColor= "bg-card-indie"
+      />
+      
+      <ProjectCard
+        image="/assets/project-2.webp"
+        title="Diseño de Contenido Visual - Chef Boutique"
+        description="Creación de contenido visual premium que elevó la percepción de marca y atrajo nuevos segmentos de clientes."
+        metrics={[
+          { label: 'Alcance', value: '+120%' },
+          { label: 'Seguidores', value: '+200%' },
+          { label: 'ROI', value: '+85%' }
+        ]}
+        bgColor="bg-pastel-yellow"
+      />
+      
+      <ProjectCard
+        image="/assets/project-3.webp"
+        title="Gestión de Marca - Pastelería Artesanal"
+        description="Posicionamiento de marca artesanal en redes sociales con storytelling auténtico y contenido de alto impacto."
+        metrics={[
+          { label: 'Likes', value: '+180%' },
+          { label: 'Comentarios', value: '+95%' },
+          { label: 'Shares', value: '+120%' }
+        ]}
+        bgColor="bg-pastel-purple"
+      />
+    </div>
+  </div>
+</section>

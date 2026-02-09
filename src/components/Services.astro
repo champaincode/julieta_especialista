@@ -1,0 +1,60 @@
+---
+import ServiceCard from './ServiceCard.astro';
+---
+
+<section id="servicios" class="section-padding bg-white">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="font-fraunces text-4xl md:text-5xl font-bold mb-4 text-text-dark">
+        Trabaja Conmigo
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Servicios diseñados para llevar tu marca al siguiente nivel
+      </p>
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ServiceCard
+        icon="📱"
+        title="Gestión de Redes Sociales"
+         bgColor= "bg-card-indie"
+        items={[
+          'Creación y planificación de contenido',
+          'Publicación y programación estratégica',
+          'Monitoreo y respuesta a comentarios',
+          'Análisis de métricas y reportes mensuales',
+          'Gestión de comunidad activa'
+        ]}
+      />
+      
+      <ServiceCard
+        icon="📈"
+        title="Estrategia de Marketing"
+        bgColor="bg-pastel-yellow"
+        items={[
+          'Auditoría de presencia digital',
+          'Definición de objetivos y KPIs',
+          'Investigación de audiencia y competencia',
+          'Plan de contenido personalizado',
+          'Optimización continua de campañas'
+        ]}
+      />
+      
+      <ServiceCard
+      
+        icon="🎨"
+        title="Creación de Contenido"
+          bgColor= "bg-pastel-purple"
+        items={[
+          'Fotografía y video profesional',
+          'Diseño gráfico para redes sociales',
+          'Copywriting persuasivo y auténtico',
+          'Storytelling de marca',
+          'Contenido optimizado para cada plataforma'
+        ]}
+      />
+    </div>
+  </div>
+</section>

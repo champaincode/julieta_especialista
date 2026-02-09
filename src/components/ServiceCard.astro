@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  items: string[];
+  bgColor: string;
+  icon: string;
+}
+
+const { title, items, bgColor, icon } = Astro.props;
+---
+
+<div class={`card ${bgColor}`}>
+  <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-md">
+    <span class="text-3xl">{icon}</span>
+  </div>
+  
+  <h3 class="font-fraunces text-2xl font-bold mb-6 text-text-dark">
+    {title}
+  </h3>
+  
+  <ul class="space-y-3">
+    {items.map(item => (
+      <li class="flex items-start gap-3">
+        <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="text-sm text-gray-700 leading-relaxed">{item}</span>
+      </li>
+    ))}
+  </ul>
+</div>

@@ -1,0 +1,89 @@
+---
+---
+
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent text-white">
+  <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#inicio" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+      <img src="/assets/logo.svg" alt="Logo Julieta Rodríguez" class="w-16 h-16 md:w-24 md:h-24 object-contain" />
+    </a>
+    
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-8 font-medium">
+      <a href="#inicio" class="text-sm hover:text-gold transition-colors duration-300 relative group">
+        Inicio
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#proyectos" class="text-sm hover:text-gold transition-colors duration-300 relative group">
+        Proyectos
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#sobre-mi" class="text-sm hover:text-gold transition-colors duration-300 relative group">
+        Sobre Mí
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#servicios" class="text-sm hover:text-gold transition-colors duration-300 relative group">
+        Servicios
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#contacto" class="text-sm hover:text-gold transition-colors duration-300 relative group">
+        Contacto
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#contacto" class="btn-primary btn-mint text-sm shadow-lg border-2 border-transparent hover:border-white/20">
+        CONTÁCTAME
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 text-text-dark">
+    <div class="px-6 py-4 flex flex-col gap-4">
+      <a href="#inicio" class="text-sm font-medium hover:text-brand-mint transition-colors">Inicio</a>
+      <a href="#proyectos" class="text-sm font-medium hover:text-brand-mint transition-colors">Proyectos</a>
+      <a href="#sobre-mi" class="text-sm font-medium hover:text-brand-mint transition-colors">Sobre Mí</a>
+      <a href="#servicios" class="text-sm font-medium hover:text-brand-mint transition-colors">Servicios</a>
+      <a href="#contacto" class="text-sm font-medium hover:text-brand-mint transition-colors">Contacto</a>
+      <a href="#contacto" class="btn-primary btn-mint text-sm text-center">
+        CONTÁCTAME
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('main-header');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Scroll effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.remove('bg-transparent', 'text-white');
+      header?.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'text-text-dark');
+    } else {
+      header?.classList.add('bg-transparent', 'text-white');
+      header?.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm', 'text-text-dark');
+    }
+  });
+
+  // Mobile menu toggle
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    // Ensure header is solid when menu is open
+    if (!mobileMenu?.classList.contains('hidden')) {
+      header?.classList.remove('bg-transparent', 'text-white');
+      header?.classList.add('bg-white', 'text-text-dark');
+    } else if (window.scrollY <= 50) {
+       header?.classList.add('bg-transparent', 'text-white');
+       header?.classList.remove('bg-white', 'text-text-dark');
+    }
+  });
+</script>

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #D4AF37;
+    --gold-light: #E9D18B;
+    --mint: #B2D8D1;
+    --mint-light: #C8E6E0;
+    
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter text-text-dark bg-bg-light;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-fraunces;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 rounded-full font-inter font-medium transition-all duration-250 hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-mint {
+    background-color: var(--mint);
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    @apply transition-colors duration-250;
+  }
+
+  .btn-mint:hover {
+    background-color: var(--mint-light);
+  }
+  
+  .btn-gold {
+    background-color: var(--gold);
+    color: white;
+    @apply transition-colors duration-250;
+  }
+
+  .btn-gold:hover {
+    background-color: var(--gold-light);
+  }
+  
+  .btn-gold-outline {
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    background-color: transparent;
+    @apply transition-all duration-250;
+  }
+
+  .btn-gold-outline:hover {
+    background-color: var(--gold);
+    color: white;
+  }
+  
+  .card {
+       
+    @apply bg-white rounded-3xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24 px-6 md:px-12 lg:px-24;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  }
+
+  .gold-border {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    @apply transition-colors;
+  }
+  
+  .gold-border:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+  }
+
+  .btn-outline {
+    border: 2px solid theme('colors.brand-mint');
+    color: theme('colors.brand-mint');
+    @apply px-8 py-3 rounded-full font-inter font-medium transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    background-color: theme('colors.brand-mint');
+    color: white;
+  }
+}
+
+ 

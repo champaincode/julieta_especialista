@@ -1,0 +1,60 @@
+---
+import FeatureMiniCard from './FeatureMiniCard.astro';
+---
+
+<section id="sobre-mi" class="section-padding bg-bg-light">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="font-fraunces text-4xl md:text-5xl font-bold mb-4 text-text-dark">
+        Sobre Mí
+      </h2>
+    </div>
+    
+    <!-- Two Column Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Left: Image -->
+      <div class="rounded-3xl overflow-hidden shadow-xl">
+        <img 
+          src="/assets/julieta-about.webp" 
+          alt="Julieta Rodríguez"
+          class="w-full h-[500px] object-cover"
+        />
+      </div>
+      
+      <!-- Right: Content -->
+      <div>
+        <p class="text-gray-700 leading-relaxed mb-8 text-lg">
+          Soy especialista en marketing digital con más de 5 años de experiencia ayudando a marcas gastronómicas y de hospitalidad a conectar con su audiencia de manera auténtica y efectiva.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-10 text-lg">
+          Mi enfoque combina estrategia, creatividad y análisis de datos para crear campañas que no solo generan engagement, sino que impulsan resultados medibles y sostenibles.
+        </p>
+        
+        <!-- Feature Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <FeatureMiniCard
+            icon="🎓"
+            title="Formación Oficial"
+            description="Certificaciones en marketing digital y gestión de redes sociales"
+          />
+          <FeatureMiniCard
+            icon="💼"
+            title="Experiencia Comprobada"
+            description="Más de 5 años trabajando con marcas gastronómicas"
+          />
+          <FeatureMiniCard
+            icon="📊"
+            title="Resultados Medibles"
+            description="Estrategias basadas en datos y métricas concretas"
+          />
+          <FeatureMiniCard
+            icon="🎯"
+            title="Especialización"
+            description="Enfoque exclusivo en gastronomía y hospitalidad"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
